@@ -30,3 +30,10 @@ create a reporting tool that prints out reports based on the data in the databas
 <li>authors (name, bio, id)</li>
 <li>log (path, ip, method, status, time, ip)</li>
 </ul>
+
+<h3>Helpful Resources</h3>
+<ul>
+  <li><a href="https://www.python.org/dev/peps/pep-0008/#blank-lines">PEP8 style guide</a></li>
+  <li><a href="https://github.com/otsop110/logs-analysis-project">logs-analysis-project</a></li>
+  <li><a href="https://github.com/aviaryan/ud-logs-analysis">ud-logs-analysis</a></li>
+</ul>  
