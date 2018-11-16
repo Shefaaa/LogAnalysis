@@ -33,7 +33,7 @@ create a reporting tool that prints out reports based on the data in the databas
 
 <h3>Helpful Resources</h3>
 <ul>
-  <li><a href="https://www.python.org/dev/peps/pep-0008/#blank-lines">PEP8 style guide</a></li>
+  <li><a href="https://www.python.org/dev/peps/pep-0008/">PEP8 style guide</a></li>
   <li><a href="https://github.com/otsop110/logs-analysis-project">logs-analysis-project</a></li>
   <li><a href="https://github.com/aviaryan/ud-logs-analysis">ud-logs-analysis</a></li>
 </ul>  
