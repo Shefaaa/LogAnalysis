@@ -1,6 +1,6 @@
 
 # Logs Analysis Project
-
+create a reporting tool that prints out reports based on the data in the database. This reporting tool is a Python program using the psycopg2 module to connect to the database
 
 <h3>Technologies Used</h3>
 <ul>
