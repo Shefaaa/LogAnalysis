@@ -17,11 +17,11 @@ def connect_db(report_query):
 # display the most popular 3 articles
 def most_popular_three_articles():
     articles = connect_db("""select title, count(*) as total_page_views
-            from articles, log
-            where slug = substr(path, 10)
-            group by title
-            order by total_page_views desc
-            limit 3;""")
+             from articles, log
+             where slug = substr(path, 10)
+             group by title
+             order by total_page_views desc
+             limit 3;""")
     print("\n Most Popular Three Articals All Time: \n ")
     for title, total_page_views in articles:
         print(" \""+title+"\" -- "+str(total_page_views)+" views")
@@ -43,20 +43,20 @@ def most_popular_authors():
 # display the days did more than 1% of requests lead to error
 def days_of_large_error_percent():
     errors_days = connect_db("""select * from (
-            select all_visit.day,
-            round(cast((100*faild_visit.requests) as numeric) / cast(all_visit.requests as numeric), 1)
-            as error_percent from
-            (select date(time) as day, count(*) as requests from log group by day) as all_visit
-            join
-            (select date(time) as day, count(*) as requests from log where status
-            != '200 OK' group by day) as faild_visit
-            on all_visit.day = faild_visit.day)
-            as t where error_percent > 1.0;""")
+                select all_visit.day,
+                round(cast((100*faild_visit.requests) as numeric) / cast(all_visit.requests as numeric), 1)
+                as error_percent from
+                (select date(time) as day, count(*) as requests from log group by day) as all_visit
+                join
+                (select date(time) as day, count(*) as requests from log where status
+                != '200 OK' group by day) as faild_visit
+                on all_visit.day = faild_visit.day)
+                as t where error_percent > 1.0;""")
     print("\n Days Of Error Percent More Than 1% : \n")
     for day, error_percent in errors_days:
         print(" "+datetime.strftime(day,'%b %d, %Y')+" -- "+str(error_percent)+"% errors")
 
-                       
+                      
 
 if __name__ == '__main__':
     most_popular_three_articles()
