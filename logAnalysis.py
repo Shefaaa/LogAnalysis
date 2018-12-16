@@ -1,5 +1,5 @@
+#!/usr/bin/env python3
 
-<<<<<<< HEAD
 from datetime import datetime
 
 import psycopg2
@@ -62,5 +62,3 @@ if __name__ == '__main__':
     most_popular_three_articles()
     most_popular_authors()
     days_of_large_error_percent()
-=======
->>>>>>> b1e9f91b3d57bb7beb50176deb3dee9e391a9a19
